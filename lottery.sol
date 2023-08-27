@@ -33,6 +33,7 @@ contract lottery
         uint index = r% participants.length;
         winner=participants[index];
         winner.transfer(getBalance());
+        participants=new  address payable[](0);
     }
 
 }
